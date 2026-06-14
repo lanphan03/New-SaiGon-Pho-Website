@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="New Saigon Pho | Newburgh, NY">
 <meta name="twitter:description" content="Authentic Vietnamese pho, banh mi &amp; vermicelli in Newburgh. Order online today.">
 <meta name="twitter:image" content="images/hero-pho.jpg">
-<meta name="theme-color" content="#FAF7F2">
+<meta name="theme-color" content="#33302C">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -27,20 +27,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FAF7F2;
-    --panel:#FFFFFF;
+    --bg:#33302C;
+    --panel:#EDE8DF;
     --text:#2A2318;
-    --ivory:#F3EEE4;
-    --gold:#C49A3C;
+    --text-light:#F0EBE3;
+    --ivory:#F0EBE3;
+    --gold:#D4AF6A;
     --chili:#B6432F;
-    --line:rgba(42,35,24,0.12);
-    --muted:#6B6258;
+    --line:rgba(42,35,24,0.14);
+    --line-dark:rgba(240,235,227,0.18);
+    --muted:#5E564C;
+    --muted-light:#B8AEA4;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     background:var(--bg);
-    color:var(--text);
+    color:var(--text-light);
     font-family:'Inter',sans-serif;
     font-size:16px;
     line-height:1.6;
@@ -114,14 +117,14 @@
     font-size:clamp(3.6rem,9vw,6.4rem);
     font-weight:700;
     letter-spacing:0.06em;
-    color:var(--text);
+    color:var(--text-light);
     margin:6px 0;
   }
   .hero p.lede{
     margin-top:24px;
     max-width:460px;
     font-size:1.02rem;
-    color:var(--muted);
+    color:var(--muted-light);
   }
   .hero-ctas{
     margin-top:36px;
@@ -148,21 +151,27 @@
   .btn-primary:hover{background:#d4ab55;}
   .btn-secondary{
     background:transparent;
-    color:var(--text);
-    border-color:rgba(42,35,24,0.22);
+    color:var(--text-light);
+    border-color:var(--line-dark);
   }
   .btn-secondary:hover{border-color:var(--gold); color:var(--gold);}
+  .panel-surface .btn-secondary,
+  .order-band .btn-secondary,
+  .visit-map-footer .btn-secondary{
+    color:var(--text);
+    border-color:var(--line);
+  }
   .btn:focus-visible{outline:2px solid var(--chili);outline-offset:3px;}
 
   .hero-art{
     position:relative;
     aspect-ratio:1/1;
-    border:1px solid var(--line);
+    border:1px solid var(--line-dark);
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    background:radial-gradient(circle at 50% 45%, #F0EBE3 0%, #FAF7F2 75%);
+    background:radial-gradient(circle at 50% 45%, #4A4540 0%, #33302C 75%);
   }
   .hero-art img{
     width:100%;
@@ -184,7 +193,9 @@
     max-width:1180px;
     margin:0 auto;
     padding:80px 24px;
+    color:var(--text-light);
   }
+  .section-head h2{color:var(--text-light);}
   .section-head{
     display:flex;
     justify-content:space-between;
@@ -217,7 +228,10 @@
     gap:48px;
     align-items:center;
     padding:60px;
+    background:var(--panel);
+    color:var(--text);
   }
+  .about h2{color:var(--text);}
   .about p{color:var(--muted); margin-top:18px; max-width:480px;}
   .about-stats{
     display:grid;
@@ -238,10 +252,10 @@
     letter-spacing:0.08em;
   }
   .about-art{
-    aspect-ratio:4/5;
+    aspect-ratio:1/1;
     border:1px solid var(--line);
     display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(circle at 50% 40%, #F0EBE3 0%, #FAF7F2 80%);
+    background:radial-gradient(circle at 50% 40%, #E3DDD4 0%, #EDE8DF 80%);
   }
   .about-art img{
     width:100%;
@@ -273,7 +287,7 @@
   .menu-tab.active, .menu-tab:hover{
     border-color:var(--gold);
     color:var(--gold);
-    background:#FFFDF8;
+    background:#F5F0E8;
   }
   .menu-category{
     margin-bottom:64px;
@@ -284,7 +298,7 @@
     margin-bottom:6px;
   }
   .menu-category .cat-note{
-    color:var(--muted);
+    color:var(--muted-light);
     font-size:0.88rem;
     max-width:640px;
     margin-bottom:28px;
@@ -302,6 +316,7 @@
     display:flex;
     justify-content:space-between;
     gap:20px;
+    color:var(--text);
   }
   .menu-item h4{
     font-family:'Fraunces',serif;
@@ -335,6 +350,7 @@
     border:1px solid var(--line);
     padding:28px;
     background:var(--panel);
+    color:var(--text);
   }
   .addons h4{
     font-family:'Fraunces',serif;
@@ -372,6 +388,7 @@
   .visit > div{
     background:var(--panel);
     padding:36px;
+    color:var(--text);
   }
   .visit h3{
     font-size:1.05rem;
@@ -421,7 +438,9 @@
     padding:64px;
     text-align:center;
     background:var(--panel);
+    color:var(--text);
   }
+  .order-band h2{color:var(--text);}
   .order-band h2{font-size:clamp(2rem,5vw,3.2rem); font-weight:300;}
   .order-band h2 strong{font-weight:700; color:var(--gold);}
   .order-band p{
@@ -560,9 +579,10 @@
 
   /* ===== Footer ===== */
   footer{
-    border-top:1px solid var(--line);
+    border-top:1px solid var(--line-dark);
     padding:48px 24px;
-    background:#F3EDE4;
+    background:#2A2826;
+    color:var(--muted-light);
   }
   .footer-wrap{
     max-width:1180px;
@@ -772,7 +792,7 @@
         </div>
       </div>
       <div class="about-art">
-        <img src="images/exterior.jpg" alt="New Saigon Pho restaurant exterior on South Plank Rd, Newburgh" width="480" height="600" loading="lazy">
+        <img src="images/about-storefront.jpg" alt="New Saigon Pho storefront with menu display and pho bowl" width="1013" height="1024" loading="lazy">
       </div>
     </div>
   </section>
