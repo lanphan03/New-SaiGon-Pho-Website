@@ -12,3 +12,6 @@ financial_*/
 customer_*/
 sales_*/
 images/*.png
+!images/logo.png
+!images/favicon*.png
+!images/apple-touch-icon.png
