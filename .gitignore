@@ -1,0 +1,14 @@
+.DS_Store
+*.psd
+*.zip
+*.pdf
+*.docx
+*.csv
+restaurant-tracker/
+leonidyermoshkin*/
+Latest Menu*/
+OPERATIONS_*/
+financial_*/
+customer_*/
+sales_*/
+images/*.png
