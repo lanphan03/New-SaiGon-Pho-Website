@@ -43,6 +43,7 @@
     font-family:'Inter',sans-serif;
     font-size:16px;
     line-height:1.6;
+    overflow-x:hidden;
   }
   h1,h2,h3{
     font-family:'Fraunces',serif;
@@ -93,7 +94,8 @@
     margin-bottom:20px;
     display:flex;
     align-items:center;
-    gap:12px;
+    flex-wrap:wrap;
+    gap:8px 12px;
   }
   .hero-eyebrow::before{
     content:"";
@@ -473,17 +475,18 @@
   }
   .topbar nav ul{
     display:flex;
-    gap:30px;
+    gap:28px;
     list-style:none;
   }
   .topbar nav a{
-    font-size:0.78rem;
-    font-weight:600;
-    letter-spacing:0.12em;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--ivory);
     transition:color .2s;
     white-space:nowrap;
+    padding:6px 0;
   }
   .topbar nav a.active{color:#2a1208;}
   .topbar nav a:hover, .topbar nav a:focus-visible{color:#fff;}
@@ -541,11 +544,11 @@
   .mobile-nav ul{list-style:none;}
   .mobile-nav a{
     display:block;
-    padding:14px 0;
+    padding:16px 0;
     border-bottom:1px solid rgba(255,255,255,0.2);
-    font-size:0.82rem;
-    font-weight:600;
-    letter-spacing:0.12em;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--ivory);
   }
@@ -577,21 +580,106 @@
     display:block;
   }
 
+  /* ===== Responsive ===== */
+  @media (max-width: 1024px){
+    .topbar-wrap{gap:20px; padding:12px 20px;}
+    .topbar nav ul{gap:20px;}
+    .topbar nav a{font-size:0.92rem;}
+    .about{padding:48px 40px; gap:36px;}
+    section{padding:64px 20px;}
+  }
+
   @media (max-width: 860px){
     .topbar nav ul{display:none;}
     .menu-toggle{display:flex;}
     .topbar-wrap{padding:12px 16px;}
     .brandmark img{height:72px;}
-    .hero{grid-template-columns:1fr; padding-top:40px;}
-    .hero-art{order:-1; max-width:340px; margin:0 auto;}
-    .about{grid-template-columns:1fr; padding:40px;}
-    .about-art{aspect-ratio:16/9;}
+    .section-head{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:32px;
+    }
+    .section-head .blurb{max-width:100%;}
+    .hero{
+      grid-template-columns:1fr;
+      padding:40px 20px 36px;
+      gap:36px;
+    }
+    .hero-art{order:-1; max-width:340px; margin:0 auto; width:100%;}
+    .hero p.lede{max-width:100%;}
+    .hero-ctas .btn{flex:1 1 auto; justify-content:center; min-width:140px;}
+    .about{grid-template-columns:1fr; padding:40px 28px; gap:32px;}
+    .about p{max-width:100%;}
+    .about-art{aspect-ratio:16/9; width:100%;}
     .menu-grid{grid-template-columns:1fr;}
     .menu-2col{grid-template-columns:1fr;}
+    .menu-item{
+      flex-direction:column;
+      gap:10px;
+      padding:20px 22px;
+    }
+    .menu-item p{max-width:100%;}
+    .menu-item .price{align-self:flex-start; text-align:left;}
     .visit{grid-template-columns:1fr;}
+    .visit > div{padding:28px 24px;}
+    .visit .row{
+      flex-direction:column;
+      gap:4px;
+      align-items:flex-start;
+    }
     .visit-map iframe{height:300px;}
+    .visit-map-footer{
+      flex-direction:column;
+      align-items:flex-start;
+    }
     .order-band{padding:40px 24px;}
-    section{padding:56px 24px;}
+    section{padding:56px 20px;}
+    .footer-wrap{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:20px;
+    }
+  }
+
+  @media (max-width: 600px){
+    .menu-tabs{
+      flex-wrap:nowrap;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      margin-bottom:32px;
+      padding-bottom:4px;
+    }
+    .menu-tabs::-webkit-scrollbar{display:none;}
+    .menu-tab{flex-shrink:0;}
+    .hero h1 .display{letter-spacing:0.03em;}
+  }
+
+  @media (max-width: 480px){
+    body{font-size:15px;}
+    .topbar-wrap{padding:10px 14px; gap:12px;}
+    .brandmark img{height:58px;}
+    .icon-btn, .menu-toggle{width:38px; height:38px;}
+    .hero{padding:28px 16px 32px; gap:28px;}
+    .hero-art{max-width:100%;}
+    .hero-tag{bottom:14px; left:14px; font-size:0.65rem; padding:7px 12px;}
+    .hero-ctas{flex-direction:column; width:100%;}
+    .hero-ctas .btn{width:100%;}
+    section{padding:48px 16px;}
+    .about{padding:28px 20px;}
+    .about-stats{gap:14px;}
+    .about-stats div strong{font-size:1.65rem;}
+    .menu-tab{font-size:0.65rem; padding:8px 12px;}
+    .menu-item{padding:18px 16px;}
+    .addons{padding:20px 18px;}
+    .order-band{padding:36px 18px;}
+    .order-platforms{flex-direction:column; align-items:stretch;}
+    .order-platforms a{text-align:center;}
+    .visit > div{padding:24px 18px;}
+    .visit-map iframe{height:240px;}
+    .visit-map-footer{padding:14px 16px;}
+    .footer-wrap .logo img{height:56px;}
   }
 </style>
 </head>
@@ -638,7 +726,7 @@
   <!-- HERO -->
   <section class="hero">
     <div>
-      <div class="hero-eyebrow ticket">Newburgh, NY &middot; Pho &middot; Banh Mi &middot; Vermicelli</div>
+      <div class="hero-eyebrow ticket">Newburgh, NY &middot; Pho &middot; Banh Mi &middot; Vermicelli &middot; Rice Platters &middot; Vegetarian Dishes &middot; Drinks</div>
       <h1>Vietnamese kitchen,<span class="display">NEW SAIGON</span> done right.</h1>
       <p class="lede">Rich beef broth, fresh herbs, grilled meats, and house-made fish sauce &mdash; the full New Saigon Pho menu, from traditional pho to bubble tea, made to order at 202 South Plank Rd.</p>
       <div class="hero-ctas">
@@ -683,11 +771,7 @@
   <!-- MENU -->
   <section id="menu">
     <div class="section-head">
-      <div>
-        <span class="eyebrow-label ticket">The Menu</span>
-        <h2>New Saigon Pho menu</h2>
-      </div>
-      <p class="blurb">Traditional Vietnamese noodle soup with rice noodles, onion, scallion, and cilantro &mdash; comes with fresh bean sprout, lime, jalape&ntilde;os, and Thai basil on the side.</p>
+      <h2>New Saigon Pho menu</h2>
     </div>
 
     <div class="menu-tabs" role="tablist" aria-label="Menu categories">
