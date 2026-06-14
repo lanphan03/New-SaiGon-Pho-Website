@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Saigon Pho | Vietnamese Restaurant | Newburgh, NY</title>
+<meta name="description" content="New Saigon Pho — authentic Vietnamese pho, banh mi, vermicelli bowls &amp; bubble tea in Newburgh, NY. Order online for pickup or delivery at 202 South Plank Rd.">
+<meta name="keywords" content="New Saigon Pho, Vietnamese restaurant, pho Newburgh NY, banh mi, vermicelli, bubble tea, 202 South Plank Rd">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://newsaigonphovn.com/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="New Saigon Pho | Vietnamese Restaurant | Newburgh, NY">
+<meta property="og:description" content="Rich beef broth pho, char-grilled banh mi, fresh vermicelli bowls &amp; bubble tea — made to order in Newburgh, NY.">
+<meta property="og:image" content="images/hero-pho.jpg">
+<meta property="og:url" content="https://newsaigonphovn.com/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="New Saigon Pho | Newburgh, NY">
+<meta name="twitter:description" content="Authentic Vietnamese pho, banh mi &amp; vermicelli in Newburgh. Order online today.">
+<meta name="twitter:image" content="images/hero-pho.jpg">
+<meta name="theme-color" content="#141312">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#141312;
+    --panel:#1c1b19;
+    --ivory:#F3EEE4;
+    --gold:#D4AF6A;
+    --chili:#B6432F;
+    --line: rgba(243,238,228,0.12);
+    --muted:#A89E8E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ivory);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .ticket{
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+
+  /* ===== Gold thread divider (signature element) ===== */
+  .thread{
+    width:100%;
+    height:44px;
+    overflow:hidden;
+    position:relative;
+  }
+  .thread svg{
+    width:200%;
+    height:100%;
+    animation:driftThread 32s linear infinite;
+  }
+  @keyframes driftThread{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .thread svg{animation:none;}
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-size:1.4rem;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    letter-spacing:0.02em;
+  }
+  .logo .diamond{
+    width:8px;height:8px;
+    background:var(--gold);
+    transform:rotate(45deg);
+    display:inline-block;
+  }
+  nav a:focus-visible{outline:2px solid var(--gold); outline-offset:4px;}
+
+  /* ===== Hero ===== */
+  .hero{
+    max-width:1180px;
+    margin:0 auto;
+    padding:70px 24px 50px;
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-eyebrow{
+    font-size:0.75rem;
+    color:var(--gold);
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .hero-eyebrow::before{
+    content:"";
+    width:28px;height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,6vw,4.4rem);
+    line-height:1.05;
+    font-weight:300;
+  }
+  .hero h1 .display{
+    display:block;
+    font-size:clamp(3.6rem,9vw,6.4rem);
+    font-weight:700;
+    letter-spacing:0.06em;
+    color:var(--ivory);
+    margin:6px 0;
+  }
+  .hero p.lede{
+    margin-top:24px;
+    max-width:460px;
+    font-size:1.02rem;
+    color:var(--muted);
+  }
+  .hero-ctas{
+    margin-top:36px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 28px;
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    transition:transform .2s, background .2s, color .2s, border-color .2s;
+    border:1px solid var(--gold);
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:var(--bg);
+  }
+  .btn-primary:hover{background:#e6c789;}
+  .btn-secondary{
+    background:transparent;
+    color:var(--ivory);
+    border-color:var(--line);
+  }
+  .btn-secondary:hover{border-color:var(--gold); color:var(--gold);}
+  .btn:focus-visible{outline:2px solid var(--chili);outline-offset:3px;}
+
+  .hero-art{
+    position:relative;
+    aspect-ratio:1/1;
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:radial-gradient(circle at 50% 45%, #211f1c 0%, #141312 75%);
+  }
+  .hero-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .hero-tag{
+    position:absolute;
+    bottom:24px;
+    left:24px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    padding:9px 16px;
+    font-size:0.7rem;
+  }
+
+  /* ===== Sections ===== */
+  section{
+    max-width:1180px;
+    margin:0 auto;
+    padding:80px 24px;
+  }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:48px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:clamp(2rem,4vw,2.9rem);
+  }
+  .eyebrow-label{
+    font-size:0.72rem;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:8px;
+    display:block;
+  }
+  .section-head .blurb{
+    max-width:380px;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+
+  /* ===== About strip ===== */
+  .about{
+    border:1px solid var(--line);
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:48px;
+    align-items:center;
+    padding:60px;
+  }
+  .about p{color:var(--muted); margin-top:18px; max-width:480px;}
+  .about-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:32px;
+  }
+  .about-stats div strong{
+    font-family:'Fraunces',serif;
+    font-size:2rem;
+    display:block;
+    color:var(--gold);
+  }
+  .about-stats div span{
+    font-size:0.75rem;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .about-art{
+    aspect-ratio:4/5;
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 50% 40%, #211f1c 0%, #141312 80%);
+  }
+  .about-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  /* ===== Menu ===== */
+  .menu-category[hidden]{display:none;}
+  .menu-tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+  }
+  .menu-tab{
+    padding:9px 18px;
+    border:1px solid var(--line);
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    cursor:pointer;
+    background:transparent;
+    color:var(--muted);
+    transition:all .2s;
+    font-family:inherit;
+  }
+  .menu-tab.active, .menu-tab:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+  .menu-category{
+    margin-bottom:64px;
+  }
+  .menu-category h3.cat-title{
+    font-size:1.5rem;
+    color:var(--gold);
+    margin-bottom:6px;
+  }
+  .menu-category .cat-note{
+    color:var(--muted);
+    font-size:0.88rem;
+    max-width:640px;
+    margin-bottom:28px;
+  }
+  .menu-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .menu-item{
+    background:var(--panel);
+    padding:24px 28px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .menu-item h4{
+    font-family:'Fraunces',serif;
+    font-size:1.05rem;
+    font-weight:600;
+    margin-bottom:5px;
+  }
+  .menu-item p{
+    font-size:0.85rem;
+    color:var(--muted);
+    max-width:320px;
+  }
+  .menu-item .price{
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    color:var(--gold);
+    white-space:nowrap;
+    align-self:flex-start;
+    font-size:0.9rem;
+    text-align:right;
+  }
+  .menu-item .price small{
+    display:block;
+    font-size:0.7rem;
+    color:var(--muted);
+    text-align:right;
+    font-weight:400;
+  }
+  /* Add-ons table */
+  .addons{
+    border:1px solid var(--line);
+    padding:28px;
+    background:var(--panel);
+  }
+  .addons h4{
+    font-family:'Fraunces',serif;
+    color:var(--gold);
+    font-size:1.05rem;
+    margin-bottom:14px;
+  }
+  .addons .row{
+    display:flex;
+    justify-content:space-between;
+    font-size:0.85rem;
+    padding:7px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .addons .row:last-child{border-bottom:none;}
+  .addons .row span:last-child{
+    font-family:'Space Mono',monospace;
+    color:var(--gold);
+  }
+  .menu-2col{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:24px;
+    align-items:start;
+  }
+
+  /* ===== Visit ===== */
+  .visit{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .visit > div{
+    background:var(--panel);
+    padding:36px;
+  }
+  .visit h3{
+    font-size:1.05rem;
+    margin-bottom:14px;
+    color:var(--gold);
+  }
+  .visit .row{
+    display:flex;
+    justify-content:space-between;
+    font-size:0.88rem;
+    padding:6px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .visit .row:last-child{border-bottom:none;}
+  .visit address{font-style:normal; font-size:0.95rem; line-height:1.8; color:var(--muted);}
+  .visit address strong{color:var(--ivory); font-weight:500;}
+  .visit .map-block{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background:radial-gradient(circle at 70% 30%, #211f1c 0%, #1c1b19 80%);
+  }
+  .visit .map-block p{color:var(--muted); font-size:0.88rem; margin-top:8px;}
+
+  /* ===== Order CTA ===== */
+  .order-band{
+    border:1px solid var(--gold);
+    padding:64px;
+    text-align:center;
+  }
+  .order-band h2{font-size:clamp(2rem,5vw,3.2rem); font-weight:300;}
+  .order-band h2 strong{font-weight:700; color:var(--gold);}
+  .order-band p{
+    max-width:480px;
+    margin:18px auto 32px;
+    color:var(--muted);
+  }
+  .order-platforms{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:28px;
+  }
+  .order-platforms a{
+    padding:10px 20px;
+    border:1px solid var(--line);
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    transition:border-color .2s, color .2s;
+  }
+  .order-platforms a:hover{border-color:var(--gold); color:var(--gold);}
+
+  /* ===== Mobile menu ===== */
+  .menu-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px;
+    height:34px;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:50%;
+    cursor:pointer;
+    padding:8px;
+  }
+  .menu-toggle span{
+    display:block;
+    height:1.5px;
+    background:var(--ivory);
+    transition:transform .2s, opacity .2s;
+  }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .mobile-nav{
+    display:none;
+    background:#1a1917;
+    border-bottom:1px solid var(--line);
+    padding:0 16px 16px;
+  }
+  .mobile-nav.open{display:block;}
+  .mobile-nav ul{list-style:none;}
+  .mobile-nav a{
+    display:block;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:0.82rem;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+  }
+  .mobile-nav a:last-child{border-bottom:none;}
+
+  /* ===== Footer ===== */
+  footer{
+    border-top:1px solid var(--line);
+    padding:48px 24px;
+  }
+  .footer-wrap{
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+    font-size:0.82rem;
+    color:var(--muted);
+  }
+  .footer-wrap .logo{font-size:1.1rem; color:var(--ivory);}
+
+  /* ===== Header bar (logo / nav / icons) ===== */
+  .topbar{
+    background:#1a1917;
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-wrap{
+    max-width:1400px;
+    margin:0 auto;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:32px;
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+  }
+  .brandmark .seal{
+    width:34px;height:34px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, var(--chili), #7c2c1e);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    color:var(--ivory);
+    font-size:0.95rem;
+    flex-shrink:0;
+  }
+  .brandmark .brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+  .brandmark .brand-text .name{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.3rem;
+    letter-spacing:0.06em;
+    color:var(--ivory);
+  }
+  .brandmark .brand-text .sub{
+    font-family:'Space Mono',monospace;
+    font-size:0.62rem;
+    letter-spacing:0.32em;
+    color:var(--gold);
+    margin-top:2px;
+  }
+  .topbar nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+  }
+  .topbar nav a{
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ivory);
+    transition:color .2s;
+    white-space:nowrap;
+  }
+  .topbar nav a.active{color:var(--chili);}
+  .topbar nav a:hover, .topbar nav a:focus-visible{color:var(--gold);}
+  .topbar-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-shrink:0;
+  }
+  .icon-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;height:34px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    color:var(--ivory);
+    transition:border-color .2s, color .2s;
+  }
+  .icon-btn:hover, .icon-btn:focus-visible{border-color:var(--gold); color:var(--gold);}
+
+  /* ===== Address strip ===== */
+  .addressbar{
+    text-align:center;
+    padding:18px 24px;
+    background:
+      linear-gradient(rgba(20,19,18,0.82), rgba(20,19,18,0.88)),
+      repeating-linear-gradient(120deg, #2a2826 0 2px, #211f1d 2px 5px);
+    border-bottom:1px solid var(--line);
+  }
+  .addressbar .restaurant-name{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--gold);
+    letter-spacing:0.05em;
+  }
+  .addressbar .restaurant-info{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:0.92rem;
+    color:var(--muted);
+    margin-top:4px;
+  }
+  .addressbar .restaurant-info strong{
+    font-weight:700;
+    color:var(--ivory);
+    font-style:normal;
+  }
+
+  @media (max-width: 860px){
+    .topbar nav ul{display:none;}
+    .menu-toggle{display:flex;}
+    .topbar-wrap{padding:12px 16px;}
+    .brandmark .brand-text .name{font-size:1.1rem;}
+    .addressbar{padding:14px 16px;}
+    .addressbar .restaurant-name{font-size:0.9rem;}
+    .addressbar .restaurant-info{font-size:0.78rem;}
+    .hero{grid-template-columns:1fr; padding-top:40px;}
+    .hero-art{order:-1; max-width:340px; margin:0 auto;}
+    .about{grid-template-columns:1fr; padding:40px;}
+    .about-art{aspect-ratio:16/9;}
+    .menu-grid{grid-template-columns:1fr;}
+    .menu-2col{grid-template-columns:1fr;}
+    .visit{grid-template-columns:1fr;}
+    .order-band{padding:40px 24px;}
+    section{padding:56px 24px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="topbar-wrap">
+      <a href="#top" class="brandmark">
+        <span class="seal" aria-hidden="true">NS</span>
+        <span class="brand-text">
+          <span class="name">New Saigon</span>
+          <span class="sub">Pho &amp; Kitchen</span>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Online Order</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+      <div class="topbar-icons">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="https://www.newsaigonphovn.com/p8hv2zrd/restaurant/order-online" class="icon-btn" aria-label="Order online" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order">Online Order</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </nav>
+  <div class="addressbar">
+    <div class="restaurant-name">New Saigon Pho &mdash; Newburgh</div>
+    <div class="restaurant-info">202 South Plank Rd, Newburgh, NY 12550 | Tel: <strong>845-762-5511</strong></div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow ticket">Newburgh, NY &middot; Pho &middot; Banh Mi &middot; Vermicelli</div>
+      <h1>Vietnamese kitchen,<span class="display">NEW SAIGON</span> done right.</h1>
+      <p class="lede">Rich beef broth, fresh herbs, grilled meats, and house-made fish sauce &mdash; the full New Saigon Pho menu, from traditional pho to bubble tea, made to order at 202 South Plank Rd.</p>
+      <div class="hero-ctas">
+        <a href="https://www.newsaigonphovn.com/p8hv2zrd/restaurant/order-online" class="btn btn-primary" target="_blank" rel="noopener">Order Online</a>
+        <a href="#menu" class="btn btn-secondary">View Menu</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="images/hero-pho.jpg" alt="Bowl of New Saigon Pho with fresh herbs and beef" width="600" height="600" loading="eager">
+      <div class="hero-tag ticket">202 South Plank Rd</div>
+    </div>
+  </section>
+
+  <div class="thread" aria-hidden="true">
+    <svg viewBox="0 0 1600 44" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 22 C 100 5, 150 39, 250 22 S 400 5, 500 22 S 650 39, 750 22 S 900 5, 1000 22 S 1150 39, 1250 22 S 1400 5, 1500 22 S 1650 39, 1750 22
+               M850 22 C 950 5, 1000 39, 1100 22 S 1250 5, 1350 22 S 1500 39, 1600 22 S 1750 5, 1850 22 S 2000 39, 2100 22 S 2250 5, 2350 22 S 2500 39, 2600 22"
+            fill="none" stroke="#D4AF6A" stroke-width="1" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about">
+      <div>
+        <span class="eyebrow-label ticket">About Us</span>
+        <h2>Hudson Valley's<br>taste of Saigon.</h2>
+        <p>New Saigon Pho brings the full breadth of Vietnamese street food to Newburgh &mdash; rich slow-simmered beef broth pho, char-grilled banh mi, fresh vermicelli bowls, and a drink menu that ranges from traditional Vietnamese coffee to fruit teas and boba. Everything is made fresh and finished with bean sprout, lime, jalape&ntilde;o, and Thai basil on the side, just the way it should be.</p>
+        <div class="about-stats">
+          <div><strong>8+</strong><span>Pho varieties</span></div>
+          <div><strong>5</strong><span>Banh mi options</span></div>
+          <div><strong>10+</strong><span>Vermicelli &amp; rice plates</span></div>
+          <div><strong>20+</strong><span>Drinks &amp; bubble teas</span></div>
+        </div>
+      </div>
+      <div class="about-art">
+        <img src="images/exterior.jpg" alt="New Saigon Pho restaurant exterior on South Plank Rd, Newburgh" width="480" height="600" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow-label ticket">The Menu</span>
+        <h2>New Saigon Pho menu</h2>
+      </div>
+      <p class="blurb">Traditional Vietnamese noodle soup with rice noodles, onion, scallion, and cilantro &mdash; comes with fresh bean sprout, lime, jalape&ntilde;os, and Thai basil on the side.</p>
+    </div>
+
+    <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="cat-pho" id="tab-pho" data-target="cat-pho">Pho</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-vermicelli" id="tab-vermicelli" data-target="cat-vermicelli">Vermicelli &amp; Rice</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-banhmi" id="tab-banhmi" data-target="cat-banhmi">Banh Mi &amp; Vegetarian</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-appetizers" id="tab-appetizers" data-target="cat-appetizers">Appetizers &amp; Sides</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-specials" id="tab-specials" data-target="cat-specials">Chef's Specials</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-drinks" id="tab-drinks" data-target="cat-drinks">Drinks</button>
+    </div>
+
+    <!-- PHO -->
+    <div class="menu-category" id="cat-pho" role="tabpanel" aria-labelledby="tab-pho">
+      <h3 class="cat-title">Pho</h3>
+      <p class="cat-note">Traditional Vietnamese noodle soup with rice noodles, onion, scallion, and cilantro. Comes with fresh bean sprout, lime, jalape&ntilde;os, and Thai basil on the side.</p>
+      <div class="menu-2col">
+        <div class="menu-grid">
+          <div class="menu-item"><div><h4>Special Beef Pho</h4><p>Rare steak, brisket, and meatballs in rich beef broth.</p></div><span class="price">$15.99</span></div>
+          <div class="menu-item"><div><h4>Pho Tai &mdash; Rare Steak Pho</h4><p>Thinly sliced rare beef in rich beef broth.</p></div><span class="price">$14.99</span></div>
+          <div class="menu-item"><div><h4>Pho Chin &mdash; Well-Done Brisket Pho</h4><p>Tender slow-cooked brisket in rich beef broth.</p></div><span class="price">$14.99</span></div>
+          <div class="menu-item"><div><h4>Pho Bo Vien &mdash; Meatball Pho</h4><p>Beef meatballs in rich beef broth.</p></div><span class="price">$14.99</span></div>
+          <div class="menu-item"><div><h4>Pho Ga &mdash; Chicken Pho</h4><p>Shredded chicken in rich beef broth.</p></div><span class="price">$14.99</span></div>
+          <div class="menu-item"><div><h4>Pho Tom &mdash; Shrimp Pho</h4><p>Shrimp in rich beef broth.</p></div><span class="price">$14.99</span></div>
+          <div class="menu-item"><div><h4>Seafood Pho</h4><p>Shrimp and imitation crab in rich beef broth.</p></div><span class="price">$15.99</span></div>
+          <div class="menu-item"><div><h4>Pho Thit Nuong &mdash; Grilled Pork Pho</h4><p>Grilled marinated pork in rich beef broth.</p></div><span class="price">$16.99</span></div>
+          <div class="menu-item"><div><h4>Pho Ga Nuong &mdash; Grilled Chicken Pho</h4><p>Grilled marinated chicken in rich beef broth.</p></div><span class="price">$16.99</span></div>
+          <div class="menu-item"><div><h4>Pho Bo Lui &mdash; Sauteed Beef Pho</h4><p>Sauteed beef in rich beef broth.</p></div><span class="price">$16.99</span></div>
+          <div class="menu-item"><div><h4>Vegetable Pho</h4><p>Light vegetable broth with rice noodles, tofu, broccoli, cabbage, carrot, and daikon. Served with bean sprout, lime, jalape&ntilde;o, and Thai basil.</p></div><span class="price">$14.99</span></div>
+        </div>
+        <div class="addons">
+          <h4>Pho Add-Ons</h4>
+          <div class="row"><span>Add Beef (Brisket / Rare Steak)</span><span>+ $4.49</span></div>
+          <div class="row"><span>Add Grilled Beef</span><span>+ $4.99</span></div>
+          <div class="row"><span>Add Grilled Pork / Chicken</span><span>+ $3.99</span></div>
+          <div class="row"><span>Add Shrimp</span><span>+ $4.49</span></div>
+          <div class="row"><span>Add Beef Meatballs</span><span>+ $2.99</span></div>
+          <div class="row"><span>Add Imitation Crab</span><span>+ $2.49</span></div>
+          <div class="row"><span>Add Tofu</span><span>+ $2.50</span></div>
+          <div class="row"><span>Add Extra Noodles</span><span>+ $2.99</span></div>
+          <div class="row"><span>Add Extra Vegetables</span><span>+ $2.99</span></div>
+          <div class="row"><span>Add Extra Broccoli or Napa Cabbage</span><span>+ $3.00</span></div>
+          <div class="row"><span>Extra Beef Broth</span><span>+ $3.49</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERMICELLI & RICE -->
+    <div class="menu-category" id="cat-vermicelli" role="tabpanel" aria-labelledby="tab-vermicelli" hidden>
+      <h3 class="cat-title">Vermicelli Bowls</h3>
+      <p class="cat-note">Served over rice vermicelli with lettuce, cucumber, pickled carrot &amp; daikon, crushed peanuts, and house fish sauce. Soy sauce available upon request.</p>
+      <div class="menu-2col">
+        <div class="menu-grid">
+          <div class="menu-item"><div><h4>Combination Vermicelli</h4><p>Grilled pork, crispy egg roll, and fried butterfly shrimp.</p></div><span class="price">$16.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Pork Vermicelli with Crispy Egg Roll</h4><p>Grilled marinated pork with crispy Vietnamese egg roll.</p></div><span class="price">$15.95</span></div>
+          <div class="menu-item"><div><h4>Sauteed Beef Vermicelli</h4><p>Tender sauteed beef with house seasoning.</p></div><span class="price">$15.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Pork Vermicelli</h4><p>Grilled marinated pork.</p></div><span class="price">$14.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Chicken Vermicelli</h4><p>Grilled marinated chicken.</p></div><span class="price">$14.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Shrimp Vermicelli</h4><p>Grilled shrimp.</p></div><span class="price">$14.95</span></div>
+          <div class="menu-item"><div><h4>Crispy Egg Roll Vermicelli</h4><p>Crispy Vietnamese egg rolls.</p></div><span class="price">$13.99</span></div>
+          <div class="menu-item"><div><h4>Vegetarian Vermicelli</h4><p>Tofu, broccoli, cabbage, and carrot stir-fried in a light lemongrass sauce. Served with house soy sauce.</p></div><span class="price">$13.99</span></div>
+        </div>
+        <div class="addons">
+          <h4>Vermicelli Add-Ons</h4>
+          <div class="row"><span>Extra Vermicelli Noodles</span><span>+ $2.99</span></div>
+          <div class="row"><span>Add Egg Roll / Veggie Spring Roll</span><span>+ $2.50</span></div>
+          <div class="row"><span>Add Grilled Pork or Chicken</span><span>+ $3.99</span></div>
+          <div class="row"><span>Add Sauteed Beef or Grilled Shrimp</span><span>+ $4.99</span></div>
+        </div>
+      </div>
+
+      <h3 class="cat-title" style="margin-top:48px;">Rice Plates</h3>
+      <p class="cat-note">All rice plates are served with rice, lettuce, cucumber, pickled vegetables, and house fish sauce. Soy sauce available upon request.</p>
+      <div class="menu-2col">
+        <div class="menu-grid">
+          <div class="menu-item"><div><h4>Combination Rice Plate</h4><p>A combination of grilled pork, crispy egg roll, and fried butterfly shrimp.</p></div><span class="price">$16.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Pork Rice Plate</h4><p>Tender grilled marinated pork.</p></div><span class="price">$15.95</span></div>
+          <div class="menu-item"><div><h4>Sauteed Beef Rice Plate</h4><p>Tender beef sauteed with house seasoning.</p></div><span class="price">$14.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Chicken Rice Plate</h4><p>Marinated grilled chicken served over rice.</p></div><span class="price">$14.95</span></div>
+          <div class="menu-item"><div><h4>Grilled Shrimp Rice Plate</h4><p>Juicy grilled shrimp served over rice.</p></div><span class="price">$14.95</span></div>
+          <div class="menu-item"><div><h4>Crispy Egg Roll Rice Plate</h4><p>Golden crispy Vietnamese egg rolls.</p></div><span class="price">$13.99</span></div>
+          <div class="menu-item"><div><h4>Tofu Rice Plate</h4><p>Stir-fried tofu with broccoli in savory house soy sauce.</p></div><span class="price">$13.99</span></div>
+        </div>
+        <div class="addons">
+          <h4>Rice Plate Add-Ons</h4>
+          <div class="row"><span>Upgrade to Garlic Butter Rice</span><span>+ $1.25</span></div>
+          <div class="row"><span>Egg Roll or Vegetable Spring Roll</span><span>+ $2.50</span></div>
+          <div class="row"><span>Grilled Pork or Chicken</span><span>+ $3.99</span></div>
+          <div class="row"><span>Sauteed Beef or Shrimp</span><span>+ $4.99</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANH MI & VEGETARIAN -->
+    <div class="menu-category" id="cat-banhmi" role="tabpanel" aria-labelledby="tab-banhmi" hidden>
+      <h3 class="cat-title">Banh Mi</h3>
+      <p class="cat-note">Vietnamese baguette served with pickled carrot &amp; daikon, cucumber, cilantro, and mayo.</p>
+      <div class="menu-grid">
+        <div class="menu-item"><div><h4>Grilled Pork Banh Mi</h4><p>Savory grilled pork with house pate.</p></div><span class="price">$10.99</span></div>
+        <div class="menu-item"><div><h4>Pork Sausage &amp; Char Siu Banh Mi</h4><p>Pork sausage and sweet char siu with house pate.</p></div><span class="price">$10.99</span></div>
+        <div class="menu-item"><div><h4>Grilled Chicken Banh Mi</h4><p>Juicy grilled chicken with house pate.</p></div><span class="price">$10.99</span></div>
+        <div class="menu-item"><div><h4>Grilled Beef Banh Mi</h4><p>Tender grilled beef with house pate.</p></div><span class="price">$10.99</span></div>
+        <div class="menu-item"><div><h4>Tofu Banh Mi</h4><p>Crispy tofu on a Vietnamese baguette with pickled carrot and daikon, cucumber, and cilantro.</p></div><span class="price">$10.49</span></div>
+      </div>
+
+      <h3 class="cat-title" style="margin-top:48px;">Vegetarian Dishes</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><div><h4>Vegetable Pho</h4><p>Light vegetable broth with rice noodles, tofu, broccoli, cabbage, carrot, and daikon. Comes with bean sprout, lime, jalape&ntilde;o, and Thai basil.</p></div><span class="price">$14.99</span></div>
+        <div class="menu-item"><div><h4>Vegetable Vermicelli</h4><p>Rice vermicelli with tofu, broccoli, cabbage, and carrot stir-fried in a light lemongrass sauce.</p></div><span class="price">$13.99</span></div>
+        <div class="menu-item"><div><h4>Vegetable Spring Roll (4 pcs)</h4><p>Crispy vegetable rolls. Served with house sweet &amp; sour sauce.</p></div><span class="price">$9.99</span></div>
+        <div class="menu-item"><div><h4>Tofu Summer Roll</h4><p>Fresh rice paper rolls with fried tofu, vermicelli, and lettuce. Served with peanut sauce.</p></div><span class="price">2 pcs $6.99<br><small>3 pcs $9.99</small></span></div>
+        <div class="menu-item"><div><h4>Tofu Rice Plate</h4><p>Stir-fried tofu with broccoli served over jasmine rice.</p></div><span class="price">$13.99</span></div>
+        <div class="menu-item"><div><h4>Vegetarian Fried Rice</h4><p>Fried rice with egg, tofu, and mixed vegetables.</p></div><span class="price">$14.99</span></div>
+        <div class="menu-item"><div><h4>Tofu Banh Mi</h4><p>Crispy tofu on a Vietnamese baguette with pickled carrot and daikon, cucumber, and cilantro.</p></div><span class="price">$10.49</span></div>
+      </div>
+    </div>
+
+    <!-- APPETIZERS & SIDES -->
+    <div class="menu-category" id="cat-appetizers" role="tabpanel" aria-labelledby="tab-appetizers" hidden>
+      <h3 class="cat-title">Appetizers</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><div><h4>Grilled Meat Summer Roll</h4><p>Fresh rolls with your choice of grilled pork, beef, or chicken, vermicelli, and lettuce. Served with house fish sauce.</p></div><span class="price">2 pcs $6.99<br><small>3 pcs $9.99</small></span></div>
+        <div class="menu-item"><div><h4>Shrimp Summer Roll</h4><p>Fresh rice paper rolls with shrimp, vermicelli, and lettuce. Served with peanut sauce.</p></div><span class="price">2 pcs $6.99<br><small>3 pcs $9.99</small></span></div>
+        <div class="menu-item"><div><h4>Tofu Summer Roll</h4><p>Fresh rice paper rolls with fried tofu, vermicelli, and lettuce. Served with peanut sauce.</p></div><span class="price">2 pcs $6.99<br><small>3 pcs $9.99</small></span></div>
+        <div class="menu-item"><div><h4>Vietnamese Egg Roll (4 pcs)</h4><p>Golden fried rolls filled with pork and shrimp. Served with house fish sauce.</p></div><span class="price">$9.99</span></div>
+        <div class="menu-item"><div><h4>Fried Dumpling (8 pcs)</h4><p>Choice of pork, chicken, shrimp, or vegetables. Served with house soy dipping sauce.</p></div><span class="price">$9.99</span></div>
+        <div class="menu-item"><div><h4>Steamed Dumpling (8 pcs)</h4><p>Choice of pork, chicken, shrimp, or vegetables. Served with house soy dipping sauce.</p></div><span class="price">$9.99</span></div>
+        <div class="menu-item"><div><h4>Vegetable Spring Roll (4 pcs)</h4><p>Crispy vegetable rolls. Served with house sweet &amp; sour sauce.</p></div><span class="price">$9.99</span></div>
+        <div class="menu-item"><div><h4>Mini Shrimp Roll (10 pcs)</h4><p>Golden crispy bite-sized shrimp rolls. Served with house sweet &amp; sour sauce.</p></div><span class="price">$9.50</span></div>
+        <div class="menu-item"><div><h4>Crispy Butterfly Shrimp (6 pcs)</h4><p>Breaded fried shrimp. Served with house sweet &amp; sour sauce.</p></div><span class="price">$10.99</span></div>
+        <div class="menu-item"><div><h4>Popcorn Chicken</h4><p>Crispy chicken bites with house sweet &amp; sour sauce.</p></div><span class="price">$7.99</span></div>
+      </div>
+
+      <h3 class="cat-title" style="margin-top:48px;">Sides</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><div><h4>Steamed Jasmine Rice</h4></div><span class="price">$3.99</span></div>
+        <div class="menu-item"><div><h4>Garlic Butter Rice</h4></div><span class="price">$4.99</span></div>
+        <div class="menu-item"><div><h4>French Fries</h4></div><span class="price">$6.99</span></div>
+        <div class="menu-item"><div><h4>Add Steamed Broccoli or Napa Cabbage</h4></div><span class="price">$2.50</span></div>
+        <div class="menu-item"><div><h4>Add Tofu</h4></div><span class="price">$2.99</span></div>
+      </div>
+    </div>
+
+    <!-- CHEF'S SPECIALS -->
+    <div class="menu-category" id="cat-specials" role="tabpanel" aria-labelledby="tab-specials" hidden>
+      <h3 class="cat-title">Chef's Specials</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><div><h4>Bun Bo Hue</h4><p>Spicy lemongrass beef broth with vermicelli, beef brisket, and Vietnamese pork ham.</p></div><span class="price">$15.95</span></div>
+        <div class="menu-item"><div><h4>Vietnamese Fried Rice</h4><p>Fried rice with shrimp, Vietnamese pork sausage, egg, and mixed vegetables.</p></div><span class="price">$15.99</span></div>
+        <div class="menu-item"><div><h4>Vietnamese Salad</h4><p>Fresh cabbage and lettuce topped with your choice of sauteed beef or grilled chicken, herbs, crispy shallots, peanuts, and tangy fish sauce dressing.</p></div><span class="price">$13.99</span></div>
+        <div class="menu-item"><div><h4>Garlic Butter Wing</h4><p>Crispy fried chicken wings tossed in savory garlic butter.</p></div><span class="price">$12.99</span></div>
+        <div class="menu-item"><div><h4>Sai Gon Wing</h4><p>Crispy fried chicken wings tossed in sweet and tangy tamarind sauce.</p></div><span class="price">$12.99</span></div>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-category" id="cat-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+      <h3 class="cat-title">Drinks</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><div><h4>Vietnamese Iced Coffee</h4><p>Strong Vietnamese coffee with sweet condensed milk.</p></div><span class="price">$5.90</span></div>
+        <div class="menu-item"><div><h4>Vietnamese Hot Coffee</h4><p>Hot Vietnamese coffee with sweet condensed milk.</p></div><span class="price">$4.90</span></div>
+        <div class="menu-item"><div><h4>Milk Tea</h4><p>Choice of mango, strawberry, taro, coconut, vanilla, honeydew, matcha, classic, banana, and mocha.</p></div><span class="price">$5.90</span></div>
+        <div class="menu-item"><div><h4>Fruit Tea</h4><p>Flavors: mango, strawberry, lychee, rose, pineapple, or passion fruit.</p></div><span class="price">$5.90</span></div>
+        <div class="menu-item"><div><h4>Thai Iced Tea</h4><p>Sweet, creamy Thai tea with milk.</p></div><span class="price">$5.90</span></div>
+        <div class="menu-item"><div><h4>Thai Iced Tea with Boba</h4><p>Sweet, creamy Thai tea with milk and boba added.</p></div><span class="price">$6.20</span></div>
+        <div class="menu-item"><div><h4>Hot Jasmine Tea</h4><p>Light and fragrant jasmine tea.</p></div><span class="price">$3.90</span></div>
+        <div class="menu-item"><div><h4>Lemonade</h4><p>Fresh house lemonade.</p></div><span class="price">$5.25</span></div>
+        <div class="menu-item"><div><h4>Strawberry Lemonade</h4><p>Lemonade with strawberry flavor.</p></div><span class="price">$5.50</span></div>
+        <div class="menu-item"><div><h4>Lime Soda</h4><p>Fresh lime juice with sparkling soda.</p></div><span class="price">$5.90</span></div>
+        <div class="menu-item"><div><h4>Soft Drink</h4><p>Coke, Diet Coke, Sprite, Ginger Ale, or Seltzer Water.</p></div><span class="price">$2.75</span></div>
+        <div class="menu-item"><div><h4>Add Boba</h4></div><span class="price">+ $0.50</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow-label ticket">Visit Us</span>
+        <h2>Hours &amp; location</h2>
+      </div>
+    </div>
+    <div class="visit">
+      <div>
+        <h3>Opening Hours</h3>
+        <div class="row"><span>Mon &ndash; Thu</span><span>11:00 AM &ndash; 9:00 PM</span></div>
+        <div class="row"><span>Fri &ndash; Sat</span><span>11:00 AM &ndash; 10:00 PM</span></div>
+        <div class="row"><span>Sunday</span><span>11:00 AM &ndash; 9:00 PM</span></div>
+      </div>
+      <div>
+        <h3>Contact &amp; Address</h3>
+        <address>
+          <strong>New Saigon Pho</strong><br>
+          202 South Plank Rd<br>
+          Newburgh, NY 12550<br><br>
+          Tel: 845-762-5511
+        </address>
+      </div>
+      <div class="map-block">
+        <div>
+          <h3>Find Us</h3>
+          <p>Located on South Plank Rd in Newburgh &mdash; call ahead for pickup or large orders.</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=202+South+Plank+Rd+Newburgh+NY+12550" class="btn btn-secondary" style="align-self:flex-start;">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER CTA -->
+  <section id="order">
+    <div class="order-band">
+      <h2>Ready to <strong>order?</strong></h2>
+      <p>Order pickup directly from us, or get delivery through your favorite app.</p>
+      <div class="hero-ctas" style="justify-content:center;">
+        <a href="https://www.newsaigonphovn.com/p8hv2zrd/restaurant/order-online" class="btn btn-primary" target="_blank" rel="noopener">Order Pickup</a>
+        <a href="tel:8457625511" class="btn btn-secondary">Call to Order</a>
+      </div>
+      <div class="order-platforms">
+        <a href="https://www.doordash.com/store/new-saigon-pho-vn-27453488/" target="_blank" rel="noopener">DoorDash</a>
+        <a href="https://www.ubereats.com/store/new-saigon-pho/DagakgCLU3GDnyYukZtpcg" target="_blank" rel="noopener">Uber Eats</a>
+        <a href="https://postmates.com/store/new-saigon-pho/DagakgCLU3GDnyYukZtpcg" target="_blank" rel="noopener">Postmates</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-wrap">
+    <a href="#top" class="logo"><span class="diamond"></span>New Saigon Pho</a>
+    <div>202 South Plank Rd, Newburgh, NY 12550 &middot; Tel: 845-762-5511</div>
+    <div>&copy; 2026 New Saigon Pho. All rights reserved.</div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "New Saigon Pho",
+  "image": "images/hero-pho.jpg",
+  "url": "https://newsaigonphovn.com/",
+  "telephone": "+1-845-762-5511",
+  "servesCuisine": "Vietnamese",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "202 South Plank Rd",
+    "addressLocality": "Newburgh",
+    "addressRegion": "NY",
+    "postalCode": "12550",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "21:00"}
+  ],
+  "menu": "https://newsaigonphovn.com/#menu",
+  "acceptsReservations": false
+}
+</script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.menu-tab');
+  var panels = document.querySelectorAll('.menu-category');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.getAttribute('data-target');
+      tabs.forEach(function (t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(function (p) { p.hidden = true; });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      var panel = document.getElementById(target);
+      if (panel) {
+        panel.hidden = false;
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+
+  var toggle = document.querySelector('.menu-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', function () {
+      var open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+      toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      mobileNav.classList.toggle('open', !open);
+    });
+    mobileNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        mobileNav.classList.remove('open');
+      });
+    });
+  }
+
+  var sections = document.querySelectorAll('section[id], main[id]');
+  var navLinks = document.querySelectorAll('.topbar nav a, .mobile-nav a');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          navLinks.forEach(function (link) {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
