@@ -77,23 +77,6 @@
     .thread svg{animation:none;}
   }
 
-  /* ===== Header ===== */
-  header{
-    position:sticky;
-    top:0;
-    z-index:50;
-  }
-  .logo{
-    display:inline-flex;
-    align-items:center;
-  }
-  .logo img{
-    height:80px;
-    width:auto;
-    display:block;
-  }
-  nav a:focus-visible{outline:2px solid var(--gold); outline-offset:4px;}
-
   /* ===== Hero ===== */
   .hero{
     max-width:1180px;
@@ -377,7 +360,7 @@
   /* ===== Visit ===== */
   .visit{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
     gap:1px;
     background:var(--line);
     border:1px solid var(--line);
@@ -401,13 +384,32 @@
   .visit .row:last-child{border-bottom:none;}
   .visit address{font-style:normal; font-size:0.95rem; line-height:1.8; color:var(--muted);}
   .visit address strong{color:var(--ivory); font-weight:500;}
-  .visit .map-block{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    background:radial-gradient(circle at 70% 30%, #211f1c 0%, #1c1b19 80%);
+  .visit-map{
+    margin-top:24px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    overflow:hidden;
   }
-  .visit .map-block p{color:var(--muted); font-size:0.88rem; margin-top:8px;}
+  .visit-map iframe{
+    display:block;
+    width:100%;
+    height:420px;
+    border:0;
+  }
+  .visit-map-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    padding:16px 20px;
+    border-top:1px solid var(--line);
+  }
+  .visit-map-footer p{
+    color:var(--muted);
+    font-size:0.88rem;
+    margin:0;
+  }
 
   /* ===== Order CTA ===== */
   .order-band{
@@ -440,69 +442,15 @@
   }
   .order-platforms a:hover{border-color:var(--gold); color:var(--gold);}
 
-  /* ===== Mobile menu ===== */
-  .menu-toggle{
-    display:none;
-    flex-direction:column;
-    justify-content:center;
-    gap:5px;
-    width:34px;
-    height:34px;
-    background:none;
-    border:1px solid var(--line);
-    border-radius:50%;
-    cursor:pointer;
-    padding:8px;
-  }
-  .menu-toggle span{
-    display:block;
-    height:1.5px;
-    background:var(--ivory);
-    transition:transform .2s, opacity .2s;
-  }
-  .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
-  .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
-  .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-  .mobile-nav{
-    display:none;
-    background:#1a1917;
-    border-bottom:1px solid var(--line);
-    padding:0 16px 16px;
-  }
-  .mobile-nav.open{display:block;}
-  .mobile-nav ul{list-style:none;}
-  .mobile-nav a{
-    display:block;
-    padding:14px 0;
-    border-bottom:1px solid var(--line);
-    font-size:0.82rem;
-    font-weight:600;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-  }
-  .mobile-nav a:last-child{border-bottom:none;}
-
-  /* ===== Footer ===== */
-  footer{
-    border-top:1px solid var(--line);
-    padding:48px 24px;
-  }
-  .footer-wrap{
-    max-width:1180px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:24px;
-    font-size:0.82rem;
-    color:var(--muted);
-  }
-  .footer-wrap .logo img{height:72px;}
-
   /* ===== Header bar (logo / nav / icons) ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
   .topbar{
-    background:#1a1917;
-    border-bottom:1px solid var(--line);
+    background:#E8751A;
+    border-bottom:1px solid rgba(0,0,0,0.12);
   }
   .topbar-wrap{
     max-width:1400px;
@@ -537,8 +485,9 @@
     transition:color .2s;
     white-space:nowrap;
   }
-  .topbar nav a.active{color:var(--chili);}
-  .topbar nav a:hover, .topbar nav a:focus-visible{color:var(--gold);}
+  .topbar nav a.active{color:#2a1208;}
+  .topbar nav a:hover, .topbar nav a:focus-visible{color:#fff;}
+  nav a:focus-visible{outline:2px solid #fff; outline-offset:4px;}
   .topbar-icons{
     display:flex;
     align-items:center;
@@ -550,41 +499,82 @@
     align-items:center;
     justify-content:center;
     width:34px;height:34px;
-    border:1px solid var(--line);
+    border:1px solid rgba(255,255,255,0.45);
     border-radius:50%;
     color:var(--ivory);
-    transition:border-color .2s, color .2s;
+    transition:border-color .2s, color .2s, background .2s;
   }
-  .icon-btn:hover, .icon-btn:focus-visible{border-color:var(--gold); color:var(--gold);}
-
-  /* ===== Address strip ===== */
-  .addressbar{
-    text-align:center;
-    padding:18px 24px;
-    background:
-      linear-gradient(rgba(20,19,18,0.82), rgba(20,19,18,0.88)),
-      repeating-linear-gradient(120deg, #2a2826 0 2px, #211f1d 2px 5px);
-    border-bottom:1px solid var(--line);
+  .icon-btn:hover, .icon-btn:focus-visible{
+    border-color:#fff;
+    color:#fff;
+    background:rgba(0,0,0,0.12);
   }
-  .addressbar .restaurant-name{
-    font-family:'Fraunces',serif;
-    font-style:italic;
+  .menu-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px;
+    height:34px;
+    background:none;
+    border:1px solid rgba(255,255,255,0.45);
+    border-radius:50%;
+    cursor:pointer;
+    padding:8px;
+  }
+  .menu-toggle span{
+    display:block;
+    height:1.5px;
+    background:var(--ivory);
+    transition:transform .2s, opacity .2s;
+  }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .mobile-nav{
+    display:none;
+    background:#D96B12;
+    border-bottom:1px solid rgba(0,0,0,0.12);
+    padding:0 16px 16px;
+  }
+  .mobile-nav.open{display:block;}
+  .mobile-nav ul{list-style:none;}
+  .mobile-nav a{
+    display:block;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    font-size:0.82rem;
     font-weight:600;
-    font-size:1.05rem;
-    color:var(--gold);
-    letter-spacing:0.05em;
-  }
-  .addressbar .restaurant-info{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:0.92rem;
-    color:var(--muted);
-    margin-top:4px;
-  }
-  .addressbar .restaurant-info strong{
-    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
     color:var(--ivory);
-    font-style:normal;
+  }
+  .mobile-nav a:last-child{border-bottom:none;}
+
+  /* ===== Footer ===== */
+  footer{
+    border-top:1px solid var(--line);
+    padding:48px 24px;
+  }
+  .footer-wrap{
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+    font-size:0.82rem;
+    color:var(--muted);
+  }
+  .footer-wrap .logo img{height:72px;}
+  .logo{
+    display:inline-flex;
+    align-items:center;
+  }
+  .logo img{
+    height:80px;
+    width:auto;
+    display:block;
   }
 
   @media (max-width: 860px){
@@ -592,9 +582,6 @@
     .menu-toggle{display:flex;}
     .topbar-wrap{padding:12px 16px;}
     .brandmark img{height:72px;}
-    .addressbar{padding:14px 16px;}
-    .addressbar .restaurant-name{font-size:0.9rem;}
-    .addressbar .restaurant-info{font-size:0.78rem;}
     .hero{grid-template-columns:1fr; padding-top:40px;}
     .hero-art{order:-1; max-width:340px; margin:0 auto;}
     .about{grid-template-columns:1fr; padding:40px;}
@@ -602,6 +589,7 @@
     .menu-grid{grid-template-columns:1fr;}
     .menu-2col{grid-template-columns:1fr;}
     .visit{grid-template-columns:1fr;}
+    .visit-map iframe{height:300px;}
     .order-band{padding:40px 24px;}
     section{padding:56px 24px;}
   }
@@ -613,7 +601,7 @@
   <div class="topbar">
     <div class="topbar-wrap">
       <a href="#top" class="brandmark">
-        <img src="images/logo.png" alt="New Saigon Pho" width="671" height="680">
+        <img src="images/logo.png" alt="New Saigon Pho" width="667" height="676">
       </a>
       <nav aria-label="Main navigation">
         <ul>
@@ -643,10 +631,6 @@
       <li><a href="#visit">Visit</a></li>
     </ul>
   </nav>
-  <div class="addressbar">
-    <div class="restaurant-name">New Saigon Pho &mdash; Newburgh</div>
-    <div class="restaurant-info">202 South Plank Rd, Newburgh, NY 12550 | Tel: <strong>845-762-5511</strong></div>
-  </div>
 </header>
 
 <main id="top">
@@ -892,7 +876,7 @@
         <h3>Opening Hours</h3>
         <div class="row"><span>Mon &ndash; Thu</span><span>11:00 AM &ndash; 9:00 PM</span></div>
         <div class="row"><span>Fri &ndash; Sat</span><span>11:00 AM &ndash; 10:00 PM</span></div>
-        <div class="row"><span>Sunday</span><span>11:00 AM &ndash; 9:00 PM</span></div>
+        <div class="row"><span>Sunday</span><span>11:00 AM &ndash; 8:00 PM</span></div>
       </div>
       <div>
         <h3>Contact &amp; Address</h3>
@@ -903,12 +887,18 @@
           Tel: 845-762-5511
         </address>
       </div>
-      <div class="map-block">
-        <div>
-          <h3>Find Us</h3>
-          <p>Located on South Plank Rd in Newburgh &mdash; call ahead for pickup or large orders.</p>
-        </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=202+South+Plank+Rd+Newburgh+NY+12550" class="btn btn-secondary" style="align-self:flex-start;">Get Directions</a>
+    </div>
+    <div class="visit-map">
+      <iframe
+        src="https://maps.google.com/maps?q=New+Saigon+Pho,+202+South+Plank+Rd,+Newburgh,+NY+12550&amp;z=16&amp;output=embed"
+        title="New Saigon Pho location on Google Maps"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="visit-map-footer">
+        <p>Located on South Plank Rd in Newburgh &mdash; call ahead for pickup or large orders.</p>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=202+South+Plank+Rd,+Newburgh,+NY+12550" class="btn btn-secondary" target="_blank" rel="noopener">Get Directions</a>
       </div>
     </div>
   </section>
@@ -934,7 +924,7 @@
 
 <footer>
   <div class="footer-wrap">
-    <a href="#top" class="logo"><img src="images/logo.png" alt="New Saigon Pho" width="671" height="680"></a>
+    <a href="#top" class="logo"><img src="images/logo.png" alt="New Saigon Pho" width="667" height="676"></a>
     <div>202 South Plank Rd, Newburgh, NY 12550 &middot; Tel: 845-762-5511</div>
     <div>&copy; 2026 New Saigon Pho. All rights reserved.</div>
   </div>
@@ -961,7 +951,7 @@
   "openingHoursSpecification": [
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "21:00"},
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "22:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "21:00"}
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "20:00"}
   ],
   "menu": "https://newsaigonphovn.com/#menu",
   "acceptsReservations": false
