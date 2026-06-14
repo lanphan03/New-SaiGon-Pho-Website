@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="New Saigon Pho | Newburgh, NY">
 <meta name="twitter:description" content="Authentic Vietnamese pho, banh mi &amp; vermicelli in Newburgh. Order online today.">
 <meta name="twitter:image" content="images/hero-pho.jpg">
-<meta name="theme-color" content="#141312">
+<meta name="theme-color" content="#FAF7F2">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -27,19 +27,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#141312;
-    --panel:#1c1b19;
+    --bg:#FAF7F2;
+    --panel:#FFFFFF;
+    --text:#2A2318;
     --ivory:#F3EEE4;
-    --gold:#D4AF6A;
+    --gold:#C49A3C;
     --chili:#B6432F;
-    --line: rgba(243,238,228,0.12);
-    --muted:#A89E8E;
+    --line:rgba(42,35,24,0.12);
+    --muted:#6B6258;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     background:var(--bg);
-    color:var(--ivory);
+    color:var(--text);
     font-family:'Inter',sans-serif;
     font-size:16px;
     line-height:1.6;
@@ -113,7 +114,7 @@
     font-size:clamp(3.6rem,9vw,6.4rem);
     font-weight:700;
     letter-spacing:0.06em;
-    color:var(--ivory);
+    color:var(--text);
     margin:6px 0;
   }
   .hero p.lede{
@@ -142,13 +143,13 @@
   }
   .btn-primary{
     background:var(--gold);
-    color:var(--bg);
+    color:var(--text);
   }
-  .btn-primary:hover{background:#e6c789;}
+  .btn-primary:hover{background:#d4ab55;}
   .btn-secondary{
     background:transparent;
-    color:var(--ivory);
-    border-color:var(--line);
+    color:var(--text);
+    border-color:rgba(42,35,24,0.22);
   }
   .btn-secondary:hover{border-color:var(--gold); color:var(--gold);}
   .btn:focus-visible{outline:2px solid var(--chili);outline-offset:3px;}
@@ -161,7 +162,7 @@
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    background:radial-gradient(circle at 50% 45%, #211f1c 0%, #141312 75%);
+    background:radial-gradient(circle at 50% 45%, #F0EBE3 0%, #FAF7F2 75%);
   }
   .hero-art img{
     width:100%;
@@ -240,7 +241,7 @@
     aspect-ratio:4/5;
     border:1px solid var(--line);
     display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(circle at 50% 40%, #211f1c 0%, #141312 80%);
+    background:radial-gradient(circle at 50% 40%, #F0EBE3 0%, #FAF7F2 80%);
   }
   .about-art img{
     width:100%;
@@ -264,7 +265,7 @@
     letter-spacing:0.12em;
     text-transform:uppercase;
     cursor:pointer;
-    background:transparent;
+    background:var(--panel);
     color:var(--muted);
     transition:all .2s;
     font-family:inherit;
@@ -272,6 +273,7 @@
   .menu-tab.active, .menu-tab:hover{
     border-color:var(--gold);
     color:var(--gold);
+    background:#FFFDF8;
   }
   .menu-category{
     margin-bottom:64px;
@@ -385,7 +387,7 @@
   }
   .visit .row:last-child{border-bottom:none;}
   .visit address{font-style:normal; font-size:0.95rem; line-height:1.8; color:var(--muted);}
-  .visit address strong{color:var(--ivory); font-weight:500;}
+  .visit address strong{color:var(--text); font-weight:600;}
   .visit-map{
     margin-top:24px;
     border:1px solid var(--line);
@@ -418,6 +420,7 @@
     border:1px solid var(--gold);
     padding:64px;
     text-align:center;
+    background:var(--panel);
   }
   .order-band h2{font-size:clamp(2rem,5vw,3.2rem); font-weight:300;}
   .order-band h2 strong{font-weight:700; color:var(--gold);}
@@ -436,6 +439,7 @@
   .order-platforms a{
     padding:10px 20px;
     border:1px solid var(--line);
+    background:var(--panel);
     font-size:0.72rem;
     font-weight:600;
     letter-spacing:0.1em;
@@ -558,6 +562,7 @@
   footer{
     border-top:1px solid var(--line);
     padding:48px 24px;
+    background:#F3EDE4;
   }
   .footer-wrap{
     max-width:1180px;
@@ -689,7 +694,7 @@
   <div class="topbar">
     <div class="topbar-wrap">
       <a href="#top" class="brandmark">
-        <img src="images/logo.png" alt="New Saigon Pho" width="667" height="676">
+        <img src="images/logo.png" alt="New Saigon Pho" width="671" height="679">
       </a>
       <nav aria-label="Main navigation">
         <ul>
@@ -754,7 +759,11 @@
       <div>
         <span class="eyebrow-label ticket">About Us</span>
         <h2>Hudson Valley's<br>taste of Saigon.</h2>
-        <p>New Saigon Pho brings the full breadth of Vietnamese street food to Newburgh &mdash; rich slow-simmered beef broth pho, char-grilled banh mi, fresh vermicelli bowls, and a drink menu that ranges from traditional Vietnamese coffee to fruit teas and boba. Everything is made fresh and finished with bean sprout, lime, jalape&ntilde;o, and Thai basil on the side, just the way it should be.</p>
+        <p>New SaiGon Pho was created from a simple idea: to bring the comfort, flavor, and warmth of Vietnamese cooking to the heart of Newburgh.</p>
+        <p>Inspired by the busy streets of Saigon, where the smell of simmering broth, grilled meats, fresh herbs, and Vietnamese coffee fills the air, our restaurant brings those memories to the Hudson Valley. Every bowl of pho starts with a rich, slow-cooked beef broth made with care. Every banh mi is grilled, crisp, and full of flavor. Every vermicelli bowl, rice plate, and drink is made to feel fresh, comforting, and satisfying.</p>
+        <p>For us, Vietnamese food is more than a meal. It is family, tradition, and hospitality. It is the bowl of soup that warms you on a cold day, the fresh herbs that brighten every bite, and the familiar taste that makes you feel at home.</p>
+        <p>At New SaiGon Pho, we are proud to share the taste of Saigon with our Newburgh community. Whether you come in for pho, banh mi, bubble tea, Vietnamese coffee, or a quick meal with family and friends, we want every visit to feel welcoming, fresh, and memorable.</p>
+        <p>New SaiGon Pho &mdash; a taste of Saigon, made with heart in the Hudson Valley.</p>
         <div class="about-stats">
           <div><strong>8+</strong><span>Pho varieties</span></div>
           <div><strong>5</strong><span>Banh mi options</span></div>
@@ -958,9 +967,9 @@
     <div class="visit">
       <div>
         <h3>Opening Hours</h3>
-        <div class="row"><span>Mon &ndash; Thu</span><span>11:00 AM &ndash; 9:00 PM</span></div>
-        <div class="row"><span>Fri &ndash; Sat</span><span>11:00 AM &ndash; 10:00 PM</span></div>
-        <div class="row"><span>Sunday</span><span>11:00 AM &ndash; 8:00 PM</span></div>
+        <div class="row"><span>Tue &ndash; Thu</span><span>11:00 AM &ndash; 8:30 PM</span></div>
+        <div class="row"><span>Fri &ndash; Sat</span><span>11:00 AM &ndash; 9:00 PM</span></div>
+        <div class="row"><span>Sun</span><span>11:00 AM &ndash; 8:00 PM</span></div>
       </div>
       <div>
         <h3>Contact &amp; Address</h3>
@@ -1008,7 +1017,7 @@
 
 <footer>
   <div class="footer-wrap">
-    <a href="#top" class="logo"><img src="images/logo.png" alt="New Saigon Pho" width="667" height="676"></a>
+    <a href="#top" class="logo"><img src="images/logo.png" alt="New Saigon Pho" width="671" height="679"></a>
     <div>202 South Plank Rd, Newburgh, NY 12550 &middot; Tel: 845-762-5511</div>
     <div>&copy; 2026 New Saigon Pho. All rights reserved.</div>
   </div>
@@ -1033,8 +1042,8 @@
     "addressCountry": "US"
   },
   "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "21:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "20:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "21:00"},
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "20:00"}
   ],
   "menu": "https://newsaigonphovn.com/#menu",
